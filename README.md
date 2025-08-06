@@ -1,2 +1,2 @@
-# codepractice
-Practiced Coding.
+# dumping the code ive built over the time
+NEW TO GITHUB DEVELOPING APPS. CONFIGURING VS CODE IS TOO ERRATIC FOR ME, AND MY FRIEND WHO SET UP MY VS CODE LEFT TO THE STATES.
