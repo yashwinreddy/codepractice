@@ -10,6 +10,20 @@
 <body>
     <h1>Welcome to DevMetrics</h1>
     <p>This will become a full GitHub developer analytics dashboard.</p>
+
+    <h1>Welcome {{ username }}</h1>
+    <h2>Your Repositories:</h2>
+    <ul>
+        {% for repo in repos %}
+        <li>
+            <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+            <br>
+            Stars: {{ repo.stargazers_count }} |
+            Forks: {{ repo.forks_count }}
+        </li>
+        {% endfor %}
+    </ul>
+
 </body>
 
 </html>
