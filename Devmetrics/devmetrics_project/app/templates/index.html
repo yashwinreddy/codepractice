@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DevMetrics</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>DevMetrics</h1>
+    <form action="/profile/" method="get"
+        onsubmit="event.preventDefault(); window.location.href='/profile/' + document.getElementById('username').value;">
+        <input type="text" id="username" name="username" placeholder="Enter GitHub username" required>
+        <button type="submit">Analyze</button>
+    </form>
+</body>
+
+</html>

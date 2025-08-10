@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DevMetrics - {{ user.login }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>Developer Metrics for {{ user.login }}</h1>
+    <img src="{{ user.avatar_url }}" alt="Avatar" width="120">
+    <p><strong>Name:</strong> {{ user.name or "N/A" }}</p>
+    <p><strong>Location:</strong> {{ user.location or "N/A" }}</p>
+    <p><strong>Public Repos:</strong> {{ metrics.total_repos }}</p>
+    <p><strong>Total Stars:</strong> {{ metrics.total_stars }}</p>
+    <p><strong>Total Forks:</strong> {{ metrics.total_forks }}</p>
+    <p><strong>Open Issues:</strong> {{ metrics.total_open_issues }}</p>
+    <p><strong>Average Stars per Repo:</strong> {{ metrics.avg_stars }}</p>
+    <h2>Developer Score: {{ metrics.score }}</h2>
+
+    <h3>Top 5 Repositories</h3>
+    <ul>
+        {% for repo in repos %}
+        <li><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a> - ⭐ {{ repo.stargazers_count }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Analyze another user</a>
+</body>
+
+</html>
