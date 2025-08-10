@@ -70,8 +70,9 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # GitHub OAuth keys - set these as environment variables in Codespaces
-SOCIAL_AUTH_GITHUB_KEY = os.getenv("GITHUB_CLIENT_ID")
-SOCIAL_AUTH_GITHUB_SECRET = os.getenv("GITHUB_CLIENT_SECRET")
+SOCIAL_AUTH_GITHUB_KEY = os.getenv("DM_CLIENT_ID")
+SOCIAL_AUTH_GITHUB_SECRET = os.getenv("DM_CLIENT_SECRET")
+SECRET_KEY = os.getenv("SECRET_KEY", "fallback-secret-key-if-not-set")
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/dashboard/"
 SOCIAL_AUTH_LOGIN_URL = "/login/"
