@@ -1,4 +1,14 @@
 # DevMetrics
+---
+## Disclaimer
+
+This project is meant to be a light-hearted take on “developer analytics” and should **not** be considered an accurate representation of a developer’s skill or productivity.  
+
+Metrics can be misleading — especially if the person just bulk-uploaded an entire VS Code workspace to GitHub in one glorious commit.  
+
+Treat it as a fun experiment, not a hiring decision tool.
+---
+
 
 A simple FastAPI-based developer analytics dashboard using public GitHub API data.
 
